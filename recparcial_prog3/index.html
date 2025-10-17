@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ABM Personas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="spinner" class="spinner oculto"></div>
+
+  <div id="form-lista">
+    <h2>Formulario Lista</h2>
+    <table id="tabla-personas">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Fecha Nacimiento</th>
+          <th>DNI</th>
+          <th>País Origen</th>
+          <th>Modificar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="btn-agregar">Agregar Elemento</button>
+  </div>
+
+  <div id="form-abm" class="oculto">
+    <h2 id="form-titulo">Alta</h2>
+    <form id="formulario">
+      <input type="hidden" id="id" />
+      <label>Nombre: <input type="text" id="nombre" required /></label>
+      <label>Apellido: <input type="text" id="apellido" required /></label>
+      <label>Fecha Nacimiento (AAAAMMDD): <input type="number" id="fechaNacimiento" required /></label>
+      <label id="campo-dni" class="oculto">DNI: <input type="number" id="dni" /></label>
+      <label id="campo-pais" class="oculto">País Origen: <input type="text" id="paisOrigen" /></label>
+      <label>Tipo:
+        <select id="tipo">
+          <option value="Ciudadano">Ciudadano</option>
+          <option value="Extranjero">Extranjero</option>
+        </select>
+      </label>
+      <div class="botones">
+        <button type="submit">Aceptar</button>
+        <button type="button" id="btn-cancelar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="classes.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
